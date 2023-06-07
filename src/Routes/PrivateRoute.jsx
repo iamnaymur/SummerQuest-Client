@@ -1,18 +1,12 @@
-import { useContext } from "react";
-import { AuthContext } from "../Providers/AuthProvider";
 import { Navigate, useLocation } from "react-router-dom";
-import "./Spinner.css";
+import { useAuth } from "../hooks/useAuth";
 
 const PrivateRoute = ({ children }) => {
-  const { user, loading } = useContext(AuthContext);
+  const { user, loading } = useAuth();
   const location = useLocation();
 
   if (loading) {
-    return (
-      <div className="spinner-container">
-        <div className="spinner"></div>
-      </div>
-    );
+    return <span className="loading loading-spinner loading-xs"></span>;
   }
 
   if (user) {

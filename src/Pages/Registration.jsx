@@ -6,6 +6,7 @@ import { updateProfile } from "firebase/auth";
 
 const Registration = () => {
   const { signUp } = useAuth();
+  
   const {
     register,
     handleSubmit,

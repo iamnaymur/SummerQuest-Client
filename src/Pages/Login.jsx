@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { FaGoogle } from "react-icons/fa";
 import { useAuth } from "../hooks/useAuth";
@@ -7,23 +7,29 @@ import { toast } from "react-hot-toast";
 
 const Login = () => {
   const { user, googleSignIn, signIn } = useAuth();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/";
   //   console.log(user);
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
+  //* email/password sign in
   const onSubmit = (data) => {
     signIn(data?.email, data?.password).then((userCredentials) => {
       const user = userCredentials.user;
-      console.log(user);
-      toast.success(`Signed is successfully as ${user?.displayName}}`);
+      reset();
+      toast.success(`Signed is successfully as ${user?.displayName}`);
+      navigate(from, { replace: true });
     });
     console.log(data);
   };
-  //   console.log(errors);
 
+  //* google sign in
   const handleGoogleLogin = () => {
     googleSignIn().then((userCredentials) => {
       const user = userCredentials.user;
@@ -44,7 +50,9 @@ const Login = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.insertedId) {
+            reset();
             toast.success("Signed is successfully");
+            navigate(from, { replace: true });
           }
         });
     });
