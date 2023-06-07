@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.primary-button {
+  background-color: #4169e1;
+  
+}
