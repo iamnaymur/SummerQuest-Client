@@ -1,6 +1,7 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 // Import Swiper styles
 import "swiper/css";
@@ -10,46 +11,181 @@ import "swiper/css/navigation";
 import "./styles.css";
 
 // import required modules
-import { Parallax, Pagination, Navigation } from "swiper";
+import { Pagination, Navigation } from "swiper";
+import { Link } from "react-router-dom";
 
 export default function App() {
   return (
-    <>
+    <div className="mt-20">
       <Swiper
-        style={{
-          "--swiper-navigation-color": "#fff",
-          "--swiper-pagination-color": "#fff",
-        }}
-        speed={600}
-        parallax={true}
         pagination={{
-          clickable: true,
+          type: "progressbar",
         }}
         navigation={true}
-        modules={[Parallax, Pagination, Navigation]}
+        modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <div
-          slot="container-start"
-          className="parallax-bg"
-          style={{
-            "background-image":
-              "url(https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80)",
-          }}
-          data-swiper-parallax="-23%"
-        ></div>
-        <SwiperSlide >
-          <div className="title" data-swiper-parallax="-300">
-            Slide 1
+        <SwiperSlide>
+          <div className="relative w-3/4">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+            <img
+              src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGhvdG9ncmFwaHl8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+              alt="Image"
+              className="w-full"
+            />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+              <h1 className="md:text-4xl font-bold font-displayOne">
+                Welcome to Summer Quest.
+                <br />
+                <small className="font-displayTwo text-sm">
+                  Unleash Your Photographic Creativity!
+                </small>
+              </h1>
+              <p className="md:text-lg font-displayTwo">
+                Capture moments that last a lifetime, explore breathtaking
+                landscapes, and master the art of photography. Join us on an
+                immersive summer adventure where your creativity knows no
+                bounds. Enroll now and embark on your transformative journey
+                with Summer Quest: Where memories become masterpieces.
+              </p>
+              <h1 className="mt-10 text-2xl bold">
+                You can now also follow us here!
+              </h1>
+              <div className="mt-4  flex justify-center gap-5 ">
+                <Link href="#">
+                  <FaFacebook className="w-20 h-16" />
+                </Link>
+                <Link href="#">
+                  <FaInstagram className="w-20 h-16" />
+                </Link>
+                <Link href="#">
+                  <FaTwitter className="w-20 h-16" />
+                </Link>
+              </div>
+            </div>
           </div>
-          <div className="subtitle" data-swiper-parallax="-200">
-            Subtitle
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="relative w-3/4">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+            <img
+              src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGhvdG9ncmFwaHl8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+              alt="Image"
+              className="w-full"
+            />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+              <h1 className="text-4xl font-bold font-displayOne">
+                Welcome to Summer Quest.
+                <br />
+                <small className="font-displayTwo text-sm">
+                  Unleash Your Photographic Creativity!
+                </small>
+              </h1>
+              <p className="text-lg font-displayTwo">
+                Capture moments that last a lifetime, explore breathtaking
+                landscapes, and master the art of photography. Join us on an
+                immersive summer adventure where your creativity knows no
+                bounds. Enroll now and embark on your transformative journey
+                with Summer Quest: Where memories become masterpieces.
+              </p>
+              <h1 className="mt-10 text-2xl bold">
+                You can now also follow us here!
+              </h1>
+              <div className="mt-4  flex justify-center gap-5 ">
+                <Link href="#">
+                  <FaFacebook className="w-20 h-16" />
+                </Link>
+                <Link href="#">
+                  <FaInstagram className="w-20 h-16" />
+                </Link>
+                <Link href="#">
+                  <FaTwitter className="w-20 h-16" />
+                </Link>
+              </div>
+            </div>
           </div>
-          <div className="text" data-swiper-parallax="-100">
-            <p className="text-3xl">Welcome to our page</p>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="relative w-3/4">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+            <img
+              src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGhvdG9ncmFwaHl8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+              alt="Image"
+              className="w-full"
+            />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+              <h1 className="text-4xl font-bold font-displayOne">
+                Welcome to Summer Quest.
+                <br />
+                <small className="font-displayTwo text-sm">
+                  Unleash Your Photographic Creativity!
+                </small>
+              </h1>
+              <p className="text-lg font-displayTwo">
+                Capture moments that last a lifetime, explore breathtaking
+                landscapes, and master the art of photography. Join us on an
+                immersive summer adventure where your creativity knows no
+                bounds. Enroll now and embark on your transformative journey
+                with Summer Quest: Where memories become masterpieces.
+              </p>
+              <h1 className="mt-10 text-2xl bold">
+                You can now also follow us here!
+              </h1>
+              <div className="mt-4  flex justify-center gap-5 ">
+                <Link href="#">
+                  <FaFacebook className="w-20 h-16" />
+                </Link>
+                <Link href="#">
+                  <FaInstagram className="w-20 h-16" />
+                </Link>
+                <Link href="#">
+                  <FaTwitter className="w-20 h-16" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="relative w-3/4">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+            <img
+              src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGhvdG9ncmFwaHl8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+              alt="Image"
+              className="w-full"
+            />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+              <h1 className="text-4xl font-bold font-displayOne">
+                Welcome to Summer Quest.
+                <br />
+                <small className="font-displayTwo text-sm">
+                  Unleash Your Photographic Creativity!
+                </small>
+              </h1>
+              <p className="text-lg font-displayTwo">
+                Capture moments that last a lifetime, explore breathtaking
+                landscapes, and master the art of photography. Join us on an
+                immersive summer adventure where your creativity knows no
+                bounds. Enroll now and embark on your transformative journey
+                with Summer Quest: Where memories become masterpieces.
+              </p>
+              <h1 className="mt-10 text-2xl bold">
+                You can now also follow us here!
+              </h1>
+              <div className="mt-4  flex justify-center gap-5 ">
+                <Link href="#">
+                  <FaFacebook className="w-20 h-16" />
+                </Link>
+                <Link href="#">
+                  <FaInstagram className="w-20 h-16" />
+                </Link>
+                <Link href="#">
+                  <FaTwitter className="w-20 h-16" />
+                </Link>
+              </div>
+            </div>
           </div>
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 }

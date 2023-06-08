@@ -4,9 +4,9 @@ export default {
   theme: {
     fontFamily: {
       displayOne: ["Pacifico", "cursive"],
+      displayTwo: [" Kanit", "sans-serif"],
     },
     extend: {},
   },
   plugins: [require("daisyui")],
 };
-
