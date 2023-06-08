@@ -5,6 +5,7 @@ import { toast } from "react-hot-toast";
 
 const ManageClasses = () => {
   const [classes, loading, refetch] = useClasses();
+  console.log(classes)
 
   const handleDenyStatus = (classId) => {
     fetch(`${import.meta.env.VITE_API_URL}/class/denied/${classId}`, {
@@ -38,6 +39,7 @@ const ManageClasses = () => {
       <h1 className="text-center text-xl mb-10 bold">
         Manage all the classes below.
       </h1>
+
       <table className="table border border-gray-300 bg-white ">
         {/* Head */}
         <thead>

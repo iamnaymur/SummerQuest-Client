@@ -12,6 +12,7 @@ import SelectedClasses from "../Dashboard/Student/SelectedClasses";
 import EnrolledClasses from "../Dashboard/Student/EnrolledClasses";
 import AddClass from "../Dashboard/Instructor/AddClass";
 import MyClass from "../Dashboard/Instructor/MyClass";
+import FeedBack from "../Dashboard/Admin/FeedBack";
 // import AdminRoute from "./AdminRoute";
 
 export const router = createBrowserRouter([
@@ -71,6 +72,12 @@ export const router = createBrowserRouter([
       {
         path: "/dashboard/my-class",
         element: <MyClass></MyClass>,
+      },
+      {
+        path: "/dashboard/class/feedback/:id",
+        element: <FeedBack></FeedBack>,
+        loader: ({ params }) =>
+          fetch(`${import.meta.env.VITE_API_URL}/class/feedback/${params.id}`),
       },
     ],
   },

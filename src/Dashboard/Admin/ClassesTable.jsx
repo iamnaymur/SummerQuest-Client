@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ClassesTable = ({
   singleClass,
@@ -45,7 +46,9 @@ const ClassesTable = ({
           >
             Deny
           </button>
-          <button className="btn-sm bg-blue-500  rounded-lg">FeedBack</button>
+          <button className="btn-sm bg-blue-500  rounded-lg">
+            <Link to={`/dashboard/class/feedback/${_id}`}>Feedback</Link>
+          </button>
         </td>
       </tr>
     </tbody>
