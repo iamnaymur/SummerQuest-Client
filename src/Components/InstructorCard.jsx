@@ -8,7 +8,7 @@ const InstructorCard = ({ instructor }) => {
       <img
         src={photo}
         alt="instructor image"
-        className="h-48 w-full rounded shadow-gray-400 shadow-2xl object-cover"
+        className="h-48 w-80 rounded shadow-gray-400 shadow-2xl object-cover"
       />
 
       <div className="p-4">

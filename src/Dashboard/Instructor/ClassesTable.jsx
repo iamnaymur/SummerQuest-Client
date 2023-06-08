@@ -9,9 +9,9 @@ const ClassesTable = ({ singleClass, index }) => {
         <td>{index + 1}</td>
         <td>{className}</td>
         <td>{status}</td>
-        <td>{status === "denied" ? { feedback } : "No feedback yet"}</td>
+        <td>{status === "denied" ? feedback : "No feedback yet"}</td>
+        {/* <td>{feedback}</td> */}
         <td>{students}</td>
-        
       </tr>
     </tbody>
   );

@@ -48,7 +48,7 @@ const ApprovedClasses = () => {
       <h1 className="text-center font-displayTwo  bold text-3xl ">
         All our available classes{" "}
       </h1>
-      <div className="mt-10 container mx-auto">
+      <div className="mt-10 container mx-auto grid grid-cols-3">
         {approvedClasses.map((singleClass) => (
           <div key={singleClass._id}>
             {" "}
@@ -59,7 +59,7 @@ const ApprovedClasses = () => {
             >
               <img
                 src={singleClass.image}
-                alt="Shoes"
+                alt="Course Image"
                 className="transition-all duration-300 ease-in-out transform "
               />
 
