@@ -16,9 +16,9 @@ const AddClass = () => {
     const email = user?.email;
     const seats = form.seats.value;
     const price = form.price.value;
-    // const status = setStatus('pending');
+    const status = setStatus('pending');
 
-    const newClass = { className, image, name, email, seats, price };
+    const newClass = { className, image, name, email, seats, price ,status};
 
     addClass(newClass)
       .then((data) => {

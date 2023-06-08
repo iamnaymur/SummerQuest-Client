@@ -1,9 +1,44 @@
 import React from "react";
+import useClasses from "../../hooks/useClasses";
+import ClassesTable from "./ClassesTable";
+import { toast } from "react-hot-toast";
 
-const ManageClasses = ({}) => {
+const ManageClasses = () => {
+  const [classes, loading, refetch] = useClasses();
+
+  const handleDenyStatus = (classId) => {
+    fetch(`${import.meta.env.VITE_API_URL}/class/denied/${classId}`, {
+      method: "PATCH",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount) {
+          toast.error("Class approval denied");
+          refetch();
+        }
+      });
+  };
+
+  const handleApprovedStatus = (singleClassId) => {
+    fetch(`${import.meta.env.VITE_API_URL}/class/approved/${singleClassId}`, {
+      method: "PATCH",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount) {
+          toast.success("Class approved successfully");
+          refetch();
+        }
+      });
+  };
   return (
-    <div className="overflow-x-auto w-full">
-      <table className="table border border-gray-300 bg-white">
+    <div className="overflow-x-auto w-5/6">
+      <h1 className="text-center text-xl mb-10 bold">
+        Manage all the classes below.
+      </h1>
+      <table className="table border border-gray-300 bg-white ">
         {/* Head */}
         <thead>
           <tr>
@@ -17,24 +52,15 @@ const ManageClasses = ({}) => {
             <th className="border-b px-4 py-2">Actions</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td className="border-b px-4 py-2">Image</td>
-            <td className="border-b px-4 py-2">Photo</td>
-            <td className="border-b px-4 py-2">Name</td>
-            <td className="border-b px-4 py-2">Email</td>
-            <td className="border-b px-4 py-2">Seats</td>
-            <td className="border-b px-4 py-2">1200</td>
-            <td className="border-b px-4 py-2">Pending</td>
-            <td className="border-b px-4 py-2">
-              <button className="btn-sm bg-green-300">Approve</button>
-              <button className="btn-sm bg-red-400">Deny</button>
-              <button className="btn-sm bg-blue-500">FeedBack</button>
-            </td>
-          </tr>
-        </tbody>
 
-        {/* Add more rows here if needed */}
+        {classes.map((singleClass) => (
+          <ClassesTable
+            handleDenyStatus={handleDenyStatus}
+            handleApprovedStatus={handleApprovedStatus}
+            singleClass={singleClass}
+            key={singleClass._id}
+          ></ClassesTable>
+        ))}
       </table>
     </div>
   );
