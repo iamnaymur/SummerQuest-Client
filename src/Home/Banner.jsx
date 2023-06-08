@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 export default function App() {
   return (
     <div className="mt-20">
-      <Swiper
+      {/* <Swiper
         pagination={{
           type: "progressbar",
         }}
@@ -185,7 +185,7 @@ export default function App() {
             </div>
           </div>
         </SwiperSlide>
-      </Swiper>
+      </Swiper> */}
     </div>
   );
 }

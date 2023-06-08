@@ -42,7 +42,9 @@ const Login = () => {
         role: "student",
       };
 
-      fetch("http://localhost:5000/users", {
+      // ${import.meta.env.VITE_API_URL}
+
+      fetch(`${import.meta.env.VITE_API_URL}/users`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(saveUser),

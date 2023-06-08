@@ -52,9 +52,12 @@ const DashBoard = () => {
                       Manage Users
                     </Link>
                   </li>
-                  <li>
-                    <Link to={"/"}>Home</Link>
-                  </li>
+                </div>
+                <div className="mt-8">
+                  <button className="btn">Logout</button>
+                  <Link to="/" className="btn ml-4">
+                    Home
+                  </Link>
                 </div>
               </>
             </div>
