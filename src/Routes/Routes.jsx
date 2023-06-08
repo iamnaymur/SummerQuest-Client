@@ -39,11 +39,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/approvedClasses",
-        element: (
-          <PrivateRoute>
-            <ApprovedClasses></ApprovedClasses>
-          </PrivateRoute>
-        ),
+        element: <ApprovedClasses></ApprovedClasses>,
       },
     ],
   },

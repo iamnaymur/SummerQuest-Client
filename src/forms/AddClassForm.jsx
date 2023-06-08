@@ -2,7 +2,6 @@ import { useAuth } from "../hooks/useAuth";
 
 const AddClassForm = ({ handleSubmit }) => {
   const { user } = useAuth();
-  //  onSubmit = { handleSubmit };
   return (
     <>
       <div>
@@ -95,12 +94,8 @@ const AddClassForm = ({ handleSubmit }) => {
             className="w-full h-14 p-3 mt-5 text-center font-medium text-white transition duration-200 rounded shadow-md primary-button"
           >
             Add Class
-            {/* {loading ? (
-              <TbFidgetSpinner className="m-auto animate-spin" size={24} />
-            ) : (
-              "Save & Continue"
-            )} */}
           </button>
+          {/* <span>{ span}</span> */}
         </form>
       </div>
     </>

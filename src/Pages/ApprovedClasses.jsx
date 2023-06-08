@@ -1,15 +1,48 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../hooks/useAuth";
+import { toast } from "react-hot-toast";
 
 const ApprovedClasses = () => {
   const [approvedClasses, setApprovedClasses] = useState([]);
-  const { role } = useAuth();
-  console.log(approvedClasses);
+  const { role, user } = useAuth();
+  // console.log(approvedClasses);
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/approvedClasses`)
       .then((res) => res.json())
       .then((data) => setApprovedClasses(data));
   }, []);
+
+  const handleStudentClasses = (singleClass) => {
+    const { _id, className, email, image, name, price, seats, status } =
+      singleClass;
+    // console.log(singleClass);
+    // console.log(_id,email)
+    if (user && role === "student") {
+      const orderClass = {
+        classId: _id,
+        className,
+        instructorEmail: email,
+        instructorName: name,
+        image,
+        price,
+        seats,
+        status,
+      };
+      fetch(`${import.meta.env.VITE_API_URL}/selectedClasses`, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(orderClass),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.insertedId) {
+            toast.success("Added to student dashboard");
+          }
+        });
+    } else {
+      toast.error("Please login first to get into");
+    }
+  };
   return (
     <div className="mt-10">
       <h1 className="text-center font-displayTwo  bold text-3xl ">
@@ -49,12 +82,13 @@ const ApprovedClasses = () => {
                 </p>
                 <div className="flex justify-center">
                   <button
+                    onClick={() => handleStudentClasses(singleClass)}
                     disabled={
                       singleClass.seats === "0" ||
                       role === "admin" ||
                       role === "instructor"
                     }
-                    className="btn primary-button text-white transition-all duration-300 ease-in-out hover:bg-green-700"
+                    className="btn primary-button text-white transition-all duration-300 ease-in-out hover:bg-gray-300 hover:text-black"
                   >
                     Select Class
                   </button>

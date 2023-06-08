@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import AddClassForm from "../../forms/addClassForm";
 import { useAuth } from "../../hooks/useAuth";
 import { addClass } from "../../UsersAPI/classes";
+import { toast } from "react-hot-toast";
 
 const AddClass = () => {
   const { user } = useAuth();
-  const [status, setStatus] = useState("pending");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -16,23 +16,30 @@ const AddClass = () => {
     const email = user?.email;
     const seats = form.seats.value;
     const price = form.price.value;
-    const status = setStatus('pending');
+    const status = "pending";
 
-    const newClass = { className, image, name, email, seats, price ,status};
+    const newClass = {
+      className,
+      image,
+      name,
+      email,
+      seats: parseFloat(seats),
+      price: parseFloat(price),
+      status,
+    };
+    console.log(newClass);
 
     addClass(newClass)
       .then((data) => {
         console.log(data);
+        toast.success("Class added successfully");
+        form.reset();
       })
       .catch((error) => console.log(error));
   };
   return (
     <div className="w-3/4 mx-auto ">
-      <AddClassForm
-        status={status}
-        setStatus={setStatus}
-        handleSubmit={handleSubmit}
-      ></AddClassForm>
+      <AddClassForm  handleSubmit={handleSubmit}></AddClassForm>
     </div>
   );
 };
