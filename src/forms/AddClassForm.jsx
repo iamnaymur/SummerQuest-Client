@@ -1,6 +1,6 @@
 import { useAuth } from "../hooks/useAuth";
 
-const AddClassForm = ({handleSubmit}) => {
+const AddClassForm = ({ handleSubmit }) => {
   const { user } = useAuth();
   //  onSubmit = { handleSubmit };
   return (
@@ -89,9 +89,6 @@ const AddClassForm = ({handleSubmit}) => {
                 className="input input-bordered block rounded-lg h-16 px-4 py-3 text-gray-800  border border-black-300 focus:outline-blue-500"
               />
             </div>
-          </div>
-          <div>
-            <span>Status </span>
           </div>
           <button
             type="submit"

@@ -4,7 +4,7 @@ export default {
   theme: {
     fontFamily: {
       displayOne: ["Pacifico", "cursive"],
-      displayTwo: [" Kanit", "sans-serif"],
+      displayTwo: ["Montserrat", "sans-serif"],
     },
     extend: {},
   },
