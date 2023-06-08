@@ -13,6 +13,7 @@ import EnrolledClasses from "../Dashboard/Student/EnrolledClasses";
 import AddClass from "../Dashboard/Instructor/AddClass";
 import MyClass from "../Dashboard/Instructor/MyClass";
 import FeedBack from "../Dashboard/Admin/FeedBack";
+import ApprovedClasses from "../Pages/ApprovedClasses";
 // import AdminRoute from "./AdminRoute";
 
 export const router = createBrowserRouter([
@@ -35,6 +36,14 @@ export const router = createBrowserRouter([
       {
         path: "/instructors",
         element: <Instructors></Instructors>,
+      },
+      {
+        path: "/approvedClasses",
+        element: (
+          <PrivateRoute>
+            <ApprovedClasses></ApprovedClasses>
+          </PrivateRoute>
+        ),
       },
     ],
   },

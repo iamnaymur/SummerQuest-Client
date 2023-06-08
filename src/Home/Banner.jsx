@@ -34,7 +34,7 @@ export default function App() {
               className="w-full"
             />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-              <h1 className="md:text-4xl font-bold font-displayOne">
+              <h1 className="md:text-4xl font-bold font-displayTwo">
                 Welcome to Summer Quest.
                 <br />
                 <small className="font-displayTwo text-sm">

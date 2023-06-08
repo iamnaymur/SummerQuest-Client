@@ -15,7 +15,7 @@ const Navbar = () => {
         <Link to="/instructors">Instructors</Link>
       </li>
       <li>
-        <a>Classes</a>
+        <Link to='/approvedClasses'>Classes</Link>
       </li>
       <li>
         <Link to="/dashboard"> Dashboard</Link>
@@ -59,7 +59,7 @@ const Navbar = () => {
           to={"/"}
           className="btn btn-ghost normal-case text-2xl font-displayOne"
         >
-          Summer Quest
+          SummerQuest
         </Link>
       </div>
 
