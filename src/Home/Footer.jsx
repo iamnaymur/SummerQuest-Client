@@ -7,7 +7,7 @@ const Footer = () => {
       className="footer footer-center p-10 primary-color text-black font-displayTwo"
       style={{}}
     >
-      <div className="flex space-x-20">
+      <div className="md:flex md:space-x-20">
         <div className="flex items-center  flex-col ">
           <div className="space-y-3">
             <p className="text-2xl bold font-displayOne">SummerQuest</p>

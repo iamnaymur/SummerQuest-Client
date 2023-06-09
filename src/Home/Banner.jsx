@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
 
 export default function App() {
   return (
-    <div className="mt-20">
+    <div >
       <Swiper
         pagination={{
           type: "progressbar",
@@ -28,7 +28,7 @@ export default function App() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="relative w-3/4">
+          <div className="relative w-full h-3/4">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
             <img
               src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGhvdG9ncmFwaHl8ZW58MHx8MHx8fDA%3D&w=1000&q=80"

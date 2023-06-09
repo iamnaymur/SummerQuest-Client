@@ -11,7 +11,7 @@ const Instructors = () => {
   }, []);
   return (
     <div>
-      <h1 className="text-3xl font-displayTwo text-center mt-10">Lets meet our instructors</h1>
+      <h1 className="text-3xl font-displayTwo text-center ">Lets meet our instructors</h1>
       <div className="grid grid-cols-3 mx-auto container mt-10 ">
         {instructors.map((instructor) => (
           <InstructorCard

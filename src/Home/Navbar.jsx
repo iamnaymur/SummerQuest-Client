@@ -5,7 +5,7 @@ import { useAuth } from "../hooks/useAuth";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const { user, logOut } = useAuth();
+  const { user, logOut, role } = useAuth();
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
@@ -13,7 +13,9 @@ const Navbar = () => {
   const handleToggle = (e) => {
     if (e.target.checked) {
       setTheme("dark");
-    } else setTheme("light");
+    } else {
+      setTheme("light");
+    }
   };
   const navItems = (
     <>
@@ -28,16 +30,27 @@ const Navbar = () => {
       <li>
         <Link to="/">Home</Link>
       </li>
-
       <li>
         <Link to="/instructors">Instructors</Link>
       </li>
       <li>
         <Link to="/approvedClasses">Classes</Link>
       </li>
-      <li>
-        <Link to="/dashboard"> Dashboard</Link>
-      </li>
+      {role === "student" && (
+        <li>
+          <Link to="/dashboard/selected-classes"> Dashboard</Link>
+        </li>
+      )}
+      {role === "admin" && (
+        <li>
+          <Link to="/dashboard/manage-users"> Dashboard</Link>
+        </li>
+      )}
+      {role === "instructor" && (
+        <li>
+          <Link to="/dashboard/add-class"> Dashboard</Link>
+        </li>
+      )}
     </>
   );
 
@@ -50,11 +63,13 @@ const Navbar = () => {
   useEffect(() => {
     localStorage.setItem("theme", theme);
     const localTheme = localStorage.getItem("theme");
-    // add custom data-theme attribute to html tag required to update theme using DaisyUI
     document.querySelector("html").setAttribute("data-theme", localTheme);
+    document
+      .querySelector("body")
+      .classList.toggle("text-white", theme === "dark");
   }, [theme]);
   return (
-    <div className="navbar bg-base-100 ">
+    <div className="navbar  bg-base-100 fixed z-10">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

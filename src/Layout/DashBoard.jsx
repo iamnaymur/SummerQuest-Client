@@ -51,7 +51,8 @@ const DashBoard = () => {
                   alt=""
                 />
                 {userInfo}
-                <div className="mt-16">
+                <div className="divider"></div>
+                <div>
                   <li>
                     <Link className="text-xl" to="/dashboard/manage-classes">
                       Manage Classes
@@ -63,6 +64,7 @@ const DashBoard = () => {
                     </Link>
                   </li>
                 </div>
+                <div className="divider"></div>
                 <div className="mt-8 flex flex-col items-start">
                   <Link to="/" className="btn">
                     <FaHome className="text-2xl" /> Home
@@ -84,7 +86,8 @@ const DashBoard = () => {
                   alt=""
                 />
                 {userInfo}
-                <div className="mt-16">
+                <div className="divider"></div>
+                <div>
                   <li>
                     <Link className="text-xl" to="/dashboard/selected-classes">
                       Selected Classes
@@ -96,6 +99,7 @@ const DashBoard = () => {
                     </Link>
                   </li>
                 </div>
+                <div className="divider"></div>
                 <div className="mt-8 flex flex-col items-start">
                   <Link to="/" className="btn">
                     <FaHome className="text-2xl" /> Home
@@ -117,7 +121,8 @@ const DashBoard = () => {
                   alt=""
                 />
                 {userInfo}
-                <div className="mt-16">
+                <div className="divider"></div>
+                <div>
                   <li>
                     <Link className="text-xl" to="/dashboard/add-class">
                       Add a class
@@ -129,6 +134,7 @@ const DashBoard = () => {
                     </Link>
                   </li>
                 </div>
+                <div className="divider"></div>
                 <div className="mt-8 flex flex-col items-start">
                   <Link to="/" className="btn">
                     <FaHome className="text-2xl" /> Home
