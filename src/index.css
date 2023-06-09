@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 .primary-button {
-  background-color: #4169e1;
-  
+  background-color: #ff7f50;
+}
+
+.primary-color{
+  background-color: #18A7B5;
+}
+
+.hover-color{
+  background-color: #008080;
 }

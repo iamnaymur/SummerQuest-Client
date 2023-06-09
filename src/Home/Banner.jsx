@@ -1,7 +1,9 @@
 import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Bounce, Fade, Slide, Zoom } from "react-awesome-reveal";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import "animate.css";
 
 // Import Swiper styles
 import "swiper/css";
@@ -17,7 +19,7 @@ import { Link } from "react-router-dom";
 export default function App() {
   return (
     <div className="mt-20">
-      {/* <Swiper
+      <Swiper
         pagination={{
           type: "progressbar",
         }}
@@ -35,18 +37,25 @@ export default function App() {
             />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
               <h1 className="md:text-4xl font-bold font-displayTwo">
-                Welcome to Summer Quest.
+                <p className="animate__animated animate__fadeIn">
+                  Welcome to Summer Quest.
+                </p>
+
                 <br />
-                <small className="font-displayTwo text-sm">
-                  Unleash Your Photographic Creativity!
-                </small>
+                <Fade delay={1e3} cascade damping={1e-1}>
+                  <small className="font-displayTwo text-sm">
+                    Unleash Your Photographic Creativity!
+                  </small>
+                </Fade>
               </h1>
               <p className="md:text-lg font-displayTwo">
-                Capture moments that last a lifetime, explore breathtaking
-                landscapes, and master the art of photography. Join us on an
-                immersive summer adventure where your creativity knows no
-                bounds. Enroll now and embark on your transformative journey
-                with Summer Quest: Where memories become masterpieces.
+                <Fade delay={1e3}>
+                  Capture moments that last a lifetime, explore breathtaking
+                  landscapes, and master the art of photography. Join us on an
+                  immersive summer adventure where your creativity knows no
+                  bounds. Enroll now and embark on your transformative journey
+                  with Summer Quest: Where memories become masterpieces.
+                </Fade>
               </p>
               <h1 className="mt-10 text-2xl bold">
                 You can now also follow us here!
@@ -185,7 +194,7 @@ export default function App() {
             </div>
           </div>
         </SwiperSlide>
-      </Swiper> */}
+      </Swiper>
     </div>
   );
 }

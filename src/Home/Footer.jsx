@@ -4,7 +4,7 @@ import { FaFacebook, FaTwitter, FaInstagramSquare } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer
-      className="footer footer-center p-10 bg-blue-200 text-black font-displayTwo"
+      className="footer footer-center p-10 primary-color text-black font-displayTwo"
       style={{}}
     >
       <div className="flex space-x-20">
@@ -41,7 +41,7 @@ const Footer = () => {
                 placeholder="example@.com"
                 className="input input-bordered w-full "
               />
-              <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">
+              <button className="btn primary-button absolute top-0 right-0 rounded-l-none">
                 Join
               </button>
             </div>

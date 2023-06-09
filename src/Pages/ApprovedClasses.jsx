@@ -53,14 +53,14 @@ const ApprovedClasses = () => {
           <div key={singleClass._id}>
             {" "}
             <div
-              className={`w-80 shadow-xl transition-all duration-300 ease-in-out  hover:shadow-2xl hover:scale-105 ${
-                singleClass.seats === "0" ? "bg-red-400" : "bg-blue-500"
+              className={`w-80 mb-10 shadow-xl transition-all duration-300 ease-in-out hover:shadow-teal-300  hover:shadow-2xl hover:scale-105 ${
+                singleClass.seats === "0" ? "bg-red-400" : "bg-gray-200"
               }`}
             >
               <img
                 src={singleClass.image}
                 alt="Course Image"
-                className="transition-all duration-300 ease-in-out transform "
+                className="transition-all object-cover h-56 duration-300 ease-in-out transform "
               />
 
               <div className="card-body">
@@ -84,7 +84,7 @@ const ApprovedClasses = () => {
                   <button
                     onClick={() => handleStudentClasses(singleClass)}
                     disabled={
-                      singleClass.seats === "0" ||
+                      singleClass.seats === 0 ||
                       role === "admin" ||
                       role === "instructor"
                     }

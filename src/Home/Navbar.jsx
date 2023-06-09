@@ -2,11 +2,29 @@
 
 import { Link } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+  );
+
+  const handleToggle = (e) => {
+    if (e.target.checked) {
+      setTheme("dark");
+    } else setTheme("light");
+  };
   const navItems = (
     <>
+      <li>
+        <input
+          onChange={handleToggle}
+          type="checkbox"
+          checked={theme === "light" ? false : true}
+          className="toggle"
+        />
+      </li>
       <li>
         <Link to="/">Home</Link>
       </li>
@@ -15,7 +33,7 @@ const Navbar = () => {
         <Link to="/instructors">Instructors</Link>
       </li>
       <li>
-        <Link to='/approvedClasses'>Classes</Link>
+        <Link to="/approvedClasses">Classes</Link>
       </li>
       <li>
         <Link to="/dashboard"> Dashboard</Link>
@@ -28,6 +46,13 @@ const Navbar = () => {
       .then(() => {})
       .catch((error) => console.log(error));
   };
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    // add custom data-theme attribute to html tag required to update theme using DaisyUI
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [theme]);
   return (
     <div className="navbar bg-base-100 ">
       <div className="navbar-start">

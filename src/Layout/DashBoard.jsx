@@ -1,26 +1,35 @@
 // import React, { useEffect, useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
+import { FaDoorOpen, FaHome, FaUser } from "react-icons/fa";
 
 const DashBoard = () => {
-  const { user, role } = useAuth();
-  // const [role, setRole] = useState(null);
+  const { user, role, logOut } = useAuth();
+  const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   if (user) {
-  //     getUserRole(user?.email).then((data) => setRole(data));
-  //   }
-  // }, [user]);
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => console.log(error));
+  };
+
+  const userInfo = (
+    <div className="font-displayTwo gap-5 mt-10 text-center flex justify-center items-center">
+      <div>
+        <FaUser className="text-xl" />
+      </div>
+      <div>
+        <h1 className="text-xl bold">{user?.displayName}</h1>
+        <Link  className="underline cursor-pointer">{user?.email}</Link>
+      </div>
+    </div>
+  );
   return (
-    <div className="drawer lg:drawer-open">
+    <div className="drawer lg:drawer-open font-displayTwo">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col items-center justify-center">
-        {/* <p className="text-center">
-          <span className="text-2xl">Hello there {user?.displayName}</span>{" "}
-          <br />
-          Welcome on your dashboard! <br /> Please select the options on the
-          sidebar to proceed further.
-        </p> */}
+      <div className="drawer-content  flex flex-col items-center justify-center">
         <Outlet />
         <label
           htmlFor="my-drawer-2"
@@ -38,9 +47,10 @@ const DashBoard = () => {
               <>
                 <img
                   src={user?.photoURL || "anonymous.jpg"}
-                  className="rounded-full w-48 mx-auto"
+                  className="rounded-full w-48 h-48 object-cover  mx-auto"
                   alt=""
                 />
+                {userInfo}
                 <div className="mt-16">
                   <li>
                     <Link className="text-xl" to="/dashboard/manage-classes">
@@ -53,11 +63,13 @@ const DashBoard = () => {
                     </Link>
                   </li>
                 </div>
-                <div className="mt-8">
-                  <button className="btn">Logout</button>
-                  <Link to="/" className="btn ml-4">
-                    Home
+                <div className="mt-8 flex flex-col items-start">
+                  <Link to="/" className="btn">
+                    <FaHome className="text-2xl" /> Home
                   </Link>
+                  <button onClick={handleLogOut} className="btn">
+                    <FaDoorOpen className="text-2xl" /> Logout
+                  </button>
                 </div>
               </>
             </div>
@@ -68,9 +80,10 @@ const DashBoard = () => {
               <>
                 <img
                   src={user?.photoURL}
-                  className="rounded-full w-48 mx-auto"
+                  className="rounded-full w-48 h-48 object-cover mx-auto"
                   alt=""
                 />
+                {userInfo}
                 <div className="mt-16">
                   <li>
                     <Link className="text-xl" to="/dashboard/selected-classes">
@@ -82,9 +95,14 @@ const DashBoard = () => {
                       Enrolled Classes
                     </Link>
                   </li>
-                  <li>
-                    <Link to={"/"}>Home</Link>
-                  </li>
+                </div>
+                <div className="mt-8 flex flex-col items-start">
+                  <Link to="/" className="btn">
+                    <FaHome className="text-2xl" /> Home
+                  </Link>
+                  <button onClick={handleLogOut} className="btn">
+                    <FaDoorOpen className="text-2xl" /> Logout
+                  </button>
                 </div>
               </>
             </div>
@@ -95,9 +113,10 @@ const DashBoard = () => {
               <>
                 <img
                   src={user?.photoURL}
-                  className="rounded-full w-48 mx-auto"
+                  className="rounded-full w-48 h-48 object-cover mx-auto"
                   alt=""
                 />
+                {userInfo}
                 <div className="mt-16">
                   <li>
                     <Link className="text-xl" to="/dashboard/add-class">
@@ -109,9 +128,14 @@ const DashBoard = () => {
                       My classes
                     </Link>
                   </li>
-                  <li>
-                    <Link to={"/"}>Home</Link>
-                  </li>
+                </div>
+                <div className="mt-8 flex flex-col items-start">
+                  <Link to="/" className="btn">
+                    <FaHome className="text-2xl" /> Home
+                  </Link>
+                  <button onClick={handleLogOut} className="btn">
+                    <FaDoorOpen className="text-2xl" /> Logout
+                  </button>
                 </div>
               </>
             </div>
