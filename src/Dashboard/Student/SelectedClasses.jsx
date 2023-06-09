@@ -1,6 +1,7 @@
 import React from "react";
 import useStudentClasses from "../../hooks/useStudentsClasses";
 import { toast } from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 const SelectedClasses = () => {
   const [studentClasses, loading, refetch] = useStudentClasses();
@@ -8,13 +9,14 @@ const SelectedClasses = () => {
   const handleDelete = (classId) => {
     fetch(`${import.meta.env.VITE_API_URL}/studentClasses/${classId}`, {
       method: "DELETE",
-    }).then(res => res.json()).then(data => {
-      if (data.deletedCount > 0) {
-        refetch()
-        toast.success('Class deleted successfully')
-      }
     })
-
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.deletedCount > 0) {
+          refetch();
+          toast.success("Class deleted successfully");
+        }
+      });
   };
   console.log(studentClasses);
   return (
@@ -49,7 +51,12 @@ const SelectedClasses = () => {
                 </button>
               </td>
               <td className="border-b px-4 py-2">
-                <button className="btn btn-green hover:bg-blue-500">Pay</button>
+                <Link
+                  to={`/dashboard/payment/${newClass._id}`}
+                  className="btn btn-green hover:bg-blue-500"
+                >
+                  Pay
+                </Link>
               </td>
             </tr>
           </tbody>

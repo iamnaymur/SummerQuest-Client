@@ -14,6 +14,7 @@ import AddClass from "../Dashboard/Instructor/AddClass";
 import MyClass from "../Dashboard/Instructor/MyClass";
 import FeedBack from "../Dashboard/Admin/FeedBack";
 import ApprovedClasses from "../Pages/ApprovedClasses";
+import Payment from "../Dashboard/Student/Payment";
 // import AdminRoute from "./AdminRoute";
 
 export const router = createBrowserRouter([
@@ -68,6 +69,11 @@ export const router = createBrowserRouter([
       {
         path: "/dashboard/enrolled-classes",
         element: <EnrolledClasses></EnrolledClasses>,
+      },
+      {
+        path: "/dashboard/payment/:id",
+        element: <Payment></Payment>,
+        loader: ({ params}) => fetch(`${import.meta.env.VITE_API_URL}/classData/${params.id}`),
       },
       // instructor dashboard
       {
