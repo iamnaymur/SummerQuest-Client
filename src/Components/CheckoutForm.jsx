@@ -78,14 +78,21 @@ const CheckoutForm = ({ classData }) => {
       console.log("[paymentIntent]", paymentIntent);
       if (paymentIntent.status === "succeeded") {
         //saving payment information to database
+        delete classData._id
         const paymentInfo = {
           ...classData,
+          // selectedClassId:classData._id,
+          email:user?.email,
           transactionId: paymentIntent.id,
           date: new Date(),
-        }
-        axios.post('/bookings', paymentInfo).then(res => {
-          console.log(res.data)
-        })
+        };
+        axios
+          .post(`${import.meta.env.VITE_API_URL}/bookings`, paymentInfo)
+          .then((res) => {
+            if (res.data.insertedId) {
+              toast.success("Payment successful");
+            }
+          });
       }
     }
   };
