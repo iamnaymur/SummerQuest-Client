@@ -25,15 +25,15 @@ export default function App() {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper h-full"
       >
         <SwiperSlide>
-          <div className="relative w-full mt-10">
+          <div className="relative w-full h-screen mt-10">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
             <img
               src="https://i.ibb.co/vwFQYGS/1543483387-reinhart-julian-1145947-unsplash.jpg"
               alt="Image"
-              className="w-full"
+              className="w-full "
             />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
               <h1 className="md:text-4xl font-bold font-displayTwo">
@@ -75,20 +75,25 @@ export default function App() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative w-full">
+          <div className="relative h-screen w-full">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
             <img
-              src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGhvdG9ncmFwaHl8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+              src="https://i.ibb.co/NL7tsgt/what-is-unsplash.webp"
               alt="Image"
               className="w-full"
             />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-              <h1 className="text-4xl font-bold font-displayOne">
-                Welcome to Summer Quest.
+              <h1 className="md:text-4xl font-bold font-displayTwo">
+                <p className="animate__animated animate__fadeIn">
+                  Welcome to Summer Quest.
+                </p>
+
                 <br />
-                <small className="font-displayTwo text-sm">
-                  Unleash Your Photographic Creativity!
-                </small>
+                <Fade delay={1e3} cascade damping={1e-1}>
+                  <small className="font-displayTwo text-sm">
+                    Unleash Your Photographic Creativity!
+                  </small>
+                </Fade>
               </h1>
               <p className="text-lg font-displayTwo">
                 Capture moments that last a lifetime, explore breathtaking
@@ -115,20 +120,25 @@ export default function App() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative w-full">
+          <div className="relative h-screen w-full">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
             <img
-              src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGhvdG9ncmFwaHl8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+              src="https://i.ibb.co/7N9Z3Nw/benefits-of-photography.jpg"
               alt="Image"
               className="w-full"
             />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-              <h1 className="text-4xl font-bold font-displayOne">
-                Welcome to Summer Quest.
+              <h1 className="md:text-4xl font-bold font-displayTwo">
+                <p className="animate__animated animate__fadeIn">
+                  Welcome to Summer Quest.
+                </p>
+
                 <br />
-                <small className="font-displayTwo text-sm">
-                  Unleash Your Photographic Creativity!
-                </small>
+                <Fade delay={1e3} cascade damping={1e-1}>
+                  <small className="font-displayTwo text-sm">
+                    Unleash Your Photographic Creativity!
+                  </small>
+                </Fade>
               </h1>
               <p className="text-lg font-displayTwo">
                 Capture moments that last a lifetime, explore breathtaking
@@ -155,20 +165,25 @@ export default function App() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative w-full">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
+          <div className="relative h-screen w-full ">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent object-contain to-black"></div>
             <img
-              src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGhvdG9ncmFwaHl8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+              src="https://i.ibb.co/YXFJbBQ/shutterstock-93860383.jpg"
               alt="Image"
               className="w-full"
             />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-              <h1 className="text-4xl font-bold font-displayOne">
-                Welcome to Summer Quest.
+              <h1 className="md:text-4xl font-bold font-displayTwo">
+                <p className="animate__animated animate__fadeIn">
+                  Welcome to Summer Quest.
+                </p>
+
                 <br />
-                <small className="font-displayTwo text-sm">
-                  Unleash Your Photographic Creativity!
-                </small>
+                <Fade delay={1e3} cascade damping={1e-1}>
+                  <small className="font-displayTwo text-sm">
+                    Unleash Your Photographic Creativity!
+                  </small>
+                </Fade>
               </h1>
               <p className="text-lg font-displayTwo">
                 Capture moments that last a lifetime, explore breathtaking

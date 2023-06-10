@@ -12,8 +12,7 @@ const Login = () => {
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || "/";
 
-
-   const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   //   console.log(user);
   const {
     register,
@@ -69,7 +68,7 @@ const Login = () => {
       <div className="flex justify-center items-center h-screen">
         <img
           className="w-2/4"
-          src="https://images.unsplash.com/photo-1613144577510-faf2567da706?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80"
+          src="https://i.ibb.co/ZhyWzc4/97-977746-beach-sunset-wallpaper-iphone-for-iphone-wallpaper-beach.jpg"
           alt=""
         />
       </div>
