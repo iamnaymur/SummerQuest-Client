@@ -28,7 +28,7 @@ export default function App() {
         className="mySwiper h-full"
       >
         <SwiperSlide>
-          <div className="relative w-full h-screen mt-10">
+          <div className="relative w-full h-screen ">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
             <img
               src="https://i.ibb.co/vwFQYGS/1543483387-reinhart-julian-1145947-unsplash.jpg"

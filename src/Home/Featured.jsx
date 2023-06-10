@@ -3,7 +3,7 @@ import { FaCameraRetro, FaUnlock } from "react-icons/fa";
 
 const Featured = () => {
   return (
-    <div className="font-displayTwo w-3/4 md:flex gap-5 justify-between  mx-auto mb-5">
+    <div className="font-displayTwo container mt-10 md:flex gap-5 justify-between  mx-auto mb-5">
       <div className="card lg:w-1/3  shadow-xl shadow-gray-100 transition-all duration-300 ease-in-out hover:shadow-teal-300  hover:shadow-2xl hover:scale-95 ">
         <div className="card-body">
           <div>
