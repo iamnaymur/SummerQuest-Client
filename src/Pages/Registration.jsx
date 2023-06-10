@@ -1,12 +1,15 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import { toast } from "react-hot-toast";
 import { updateProfile } from "firebase/auth";
 
 const Registration = () => {
   const { signUp } = useAuth();
-  
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -37,6 +40,7 @@ const Registration = () => {
             if (data.insertedId) {
               reset();
               toast.success("User account created successfully");
+              navigate(from, { replace: true });
             }
           });
       })
@@ -88,7 +92,7 @@ const Registration = () => {
               </label>
               <input
                 type="text"
-                placeholder="Name"
+                placeholder="Email"
                 required
                 {...register("email", {
                   required: true,
@@ -104,7 +108,7 @@ const Registration = () => {
               </label>
               <input
                 type="text"
-                placeholder="Name"
+                placeholder="Password"
                 {...register("password", {
                   required: true,
                   minLength: 6,
@@ -114,6 +118,7 @@ const Registration = () => {
                 className="input input-bordered w-full"
                 required
               />
+
               {errors.password?.type === "required" && (
                 <p className="text-red-600">Password is required</p>
               )}
@@ -132,7 +137,7 @@ const Registration = () => {
               </label>
               <input
                 type="text"
-                placeholder="Name"
+                placeholder="Confirm Password"
                 {...register("confirmPassword", {
                   required: true,
                   pattern: /^(?=.*[!@#$%^&*()\-_=+{};:,<.>])(?=.*[A-Z]).{6,}$/,
@@ -151,7 +156,7 @@ const Registration = () => {
               </label>
               <input
                 type="text"
-                placeholder="PHOTO URL"
+                placeholder="Photo URL"
                 {...register("photo", { required: true })}
                 className="input input-bordered w-full "
               />

@@ -44,61 +44,60 @@ const ApprovedClasses = () => {
     }
   };
   return (
-    <div className="mt-10">
-      <h1 className="text-center font-displayTwo  bold text-3xl ">
-        All our available classes{" "}
-      </h1>
-      <div className="mt-10 container mx-auto grid grid-cols-3">
-        {approvedClasses.map((singleClass) => (
-          <div key={singleClass._id}>
-            {" "}
-            <div
-              className={`w-80 mb-10 shadow-xl transition-all duration-300 ease-in-out hover:shadow-teal-300  hover:shadow-2xl hover:scale-105 ${
-                singleClass.seats === "0" ? "bg-red-400" : "bg-gray-200"
-              }`}
-            >
-              <img
-                src={singleClass.image}
-                alt="Course Image"
-                className="transition-all object-cover h-56 duration-300 ease-in-out transform "
-              />
+      <div>
+        <h1 className="text-center font-displayTwo pt-20 bold text-3xl ">
+          All our available classes
+        </h1>
+        <div className="grid md:grid-cols-3 mt-10 gap-20 mx-auto container ">
+          {approvedClasses.map((singleClass) => (
+            <div key={singleClass._id}>
+              <div
+                className={` gap-10 mb-10  shadow-xl transition-all duration-300 ease-in-out hover:shadow-teal-300  hover:shadow-2xl hover:scale-105 ${
+                  singleClass.seats === "0" ? "bg-red-400" : "bg-gray-200"
+                }`}
+              >
+                <img
+                  src={singleClass.image}
+                  alt="Course Image"
+                  className="transition-all object-fill w-96 h-56 mx-auto p-5  duration-300 ease-in-out transform "
+                />
 
-              <div className="card-body">
-                <h2 className="card-title">{singleClass.className}</h2>
-                <p>
-                  <span className="bold">Instructor Name:</span>{" "}
-                  {singleClass.name}
-                </p>
-                <p>
-                  <span className="bold">Email:</span> {singleClass.email}
-                </p>
-                <p>
-                  <span className="bold">Price:</span> ${singleClass.price}
-                </p>
-                <p>
-                  <span className="bold">
-                    Available seats: {singleClass.seats}
-                  </span>
-                </p>
-                <div className="flex justify-center">
-                  <button
-                    onClick={() => handleStudentClasses(singleClass)}
-                    disabled={
-                      singleClass.seats === 0 ||
-                      role === "admin" ||
-                      role === "instructor"
-                    }
-                    className="btn primary-button text-white transition-all duration-300 ease-in-out hover:bg-gray-300 hover:text-black"
-                  >
-                    Select Class
-                  </button>
+                <div className="card-body">
+                  <h2 className="card-title">{singleClass.className}</h2>
+                  <p>
+                    <span className="bold">Instructor Name:</span>{" "}
+                    {singleClass.name}
+                  </p>
+                  <p>
+                    <span className="bold">Email:</span> {singleClass.email}
+                  </p>
+                  <p>
+                    <span className="bold">Price:</span> ${singleClass.price}
+                  </p>
+                  <p>
+                    <span className="bold">
+                      Available seats: {singleClass.seats}
+                    </span>
+                  </p>
+                  <div className="flex justify-center">
+                    <button
+                      onClick={() => handleStudentClasses(singleClass)}
+                      disabled={
+                        singleClass.seats === 0 ||
+                        role === "admin" ||
+                        role === "instructor"
+                      }
+                      className="btn primary-button text-white transition-all duration-300 ease-in-out hover:bg-gray-300 hover:text-black"
+                    >
+                      Select Class
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
   );
 };
 

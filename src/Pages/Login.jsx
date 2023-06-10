@@ -4,12 +4,16 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { useAuth } from "../hooks/useAuth";
 import { toast } from "react-hot-toast";
+import { useState } from "react";
 
 const Login = () => {
   const { user, googleSignIn, signIn } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || "/";
+
+
+   const [showPassword, setShowPassword] = useState(false);
   //   console.log(user);
   const {
     register,
@@ -92,10 +96,15 @@ const Login = () => {
                   <p className="label-text font-semibold">Password</p>
                 </label>
                 <input
-                  type="text"
+                  type={showPassword ? "text" : "password"}
                   placeholder="Name"
                   {...register("password", { required: true, maxLength: 120 })}
                   className="input input-bordered w-full "
+                />
+                <input
+                  onClick={() => setShowPassword(!showPassword)}
+                  type="checkbox"
+                  className="toggle mt-5 toggle-xs"
                 />
                 <span className="mt-5">
                   <small>

@@ -6,6 +6,7 @@ export default {
     fontFamily: {
       displayOne: ["Pacifico", "cursive"],
       displayTwo: ["Montserrat", "sans-serif"],
+      displayThree: ["Josefin Sans", "sans-serif"],
     },
     extend: {},
   },

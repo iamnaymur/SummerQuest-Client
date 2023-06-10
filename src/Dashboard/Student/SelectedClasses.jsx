@@ -21,6 +21,11 @@ const SelectedClasses = () => {
   console.log(studentClasses);
   return (
     <div className="overflow-x-auto w-3/4">
+      <Link to="/dashboard/payment/payment-history">
+        <button className="primary-button btn btn-sm border-none text-white mb-5">
+          Payment History
+        </button>
+      </Link>
       <table className="table border border-gray-300 bg-white">
         {/* Head */}
         <thead>

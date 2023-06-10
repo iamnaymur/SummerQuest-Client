@@ -78,11 +78,11 @@ const CheckoutForm = ({ classData }) => {
       console.log("[paymentIntent]", paymentIntent);
       if (paymentIntent.status === "succeeded") {
         //saving payment information to database
-        delete classData._id
+        delete classData._id;
         const paymentInfo = {
           ...classData,
           // selectedClassId:classData._id,
-          email:user?.email,
+          email: user?.email,
           transactionId: paymentIntent.id,
           date: new Date(),
         };

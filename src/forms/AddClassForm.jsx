@@ -1,6 +1,6 @@
 import { useAuth } from "../hooks/useAuth";
 
-const AddClassForm = ({ handleSubmit }) => {
+const   AddClassForm = ({ handleSubmit }) => {
   const { user } = useAuth();
   return (
     <>

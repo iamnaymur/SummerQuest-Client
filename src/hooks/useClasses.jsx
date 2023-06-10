@@ -1,10 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
+import { useAuth } from "./useAuth";
 
 const useClasses = () => {
+  const {user}= useAuth()
   const {data: classes=[], isLoading:loading, refetch} = useQuery({
     queryKey: ["classes"],
     queryFn: async () => {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/classes`)
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/classes/${user?.email}`)
         return response.json()
     },
   });
