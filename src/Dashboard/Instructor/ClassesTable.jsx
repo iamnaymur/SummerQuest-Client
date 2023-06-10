@@ -1,7 +1,8 @@
 import React from "react";
 
 const ClassesTable = ({ singleClass, index }) => {
-  const { className, status, feedback, students } = singleClass;
+  const { className, status, feedback, students, enrolledStudents } =
+    singleClass;
   return (
     <tbody className="h-16 font-semibold">
       {/* row 1 */}
@@ -11,7 +12,7 @@ const ClassesTable = ({ singleClass, index }) => {
         <td>{status}</td>
         <td>{status === "denied" ? feedback : "No feedback yet"}</td>
         {/* <td>{feedback}</td> */}
-        <td>{students || '0'} </td>
+        <td>{enrolledStudents || "0"} </td>
       </tr>
     </tbody>
   );

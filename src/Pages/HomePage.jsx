@@ -3,6 +3,7 @@ import Banner from "../Home/Banner";
 import PopularClasses from "../Home/PopularClasses";
 import PopularInstructors from "../Home/PopularInstructors";
 import Featured from "../Home/Featured";
+import Gallery from "../Home/Gallery";
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
       <PopularClasses></PopularClasses>
       <PopularInstructors></PopularInstructors>
       <Featured></Featured>
+      <Gallery></Gallery>
     </div>
   );
 };
