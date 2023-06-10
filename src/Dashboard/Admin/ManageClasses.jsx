@@ -2,9 +2,10 @@ import React from "react";
 import useClasses from "../../hooks/useClasses";
 import ClassesTable from "./ClassesTable";
 import { toast } from "react-hot-toast";
+import useAllClasses from "../../hooks/useAllClasses";
 
 const ManageClasses = () => {
-  const [classes, loading, refetch] = useClasses();
+  const [classes, loading, refetch] = useAllClasses()
   console.log(classes)
 
   const handleDenyStatus = (classId) => {

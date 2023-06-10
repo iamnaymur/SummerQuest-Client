@@ -65,7 +65,7 @@ const Login = () => {
   };
 
   return (
-    <div className="grid grid-cols-2">
+    <div className="grid lg:grid-cols-2">
       <div className="flex justify-center items-center h-screen">
         <img
           className="w-2/4"
@@ -97,7 +97,7 @@ const Login = () => {
                 </label>
                 <input
                   type={showPassword ? "text" : "password"}
-                  placeholder="Name"
+                  placeholder="Password"
                   {...register("password", { required: true, maxLength: 120 })}
                   className="input input-bordered w-full "
                 />
