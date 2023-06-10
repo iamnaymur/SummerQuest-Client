@@ -62,13 +62,13 @@ export default function App() {
               </h1>
               <div className="mt-4  flex justify-center gap-5 ">
                 <Link href="#">
-                  <FaFacebook className="w-20 h-16" />
+                  <FaFacebook className="w-10 h-10" />
                 </Link>
                 <Link href="#">
-                  <FaInstagram className="w-20 h-16" />
+                  <FaInstagram className="w-10 h-10" />
                 </Link>
                 <Link href="#">
-                  <FaTwitter className="w-20 h-16" />
+                  <FaTwitter className="w-10 h-10" />
                 </Link>
               </div>
             </div>
@@ -107,13 +107,13 @@ export default function App() {
               </h1>
               <div className="mt-4  flex justify-center gap-5 ">
                 <Link href="#">
-                  <FaFacebook className="w-20 h-16" />
+                  <FaFacebook className="w-10 h-10" />
                 </Link>
                 <Link href="#">
-                  <FaInstagram className="w-20 h-16" />
+                  <FaInstagram className="w-10 h-10" />
                 </Link>
                 <Link href="#">
-                  <FaTwitter className="w-20 h-16" />
+                  <FaTwitter className="w-10 h-10" />
                 </Link>
               </div>
             </div>
@@ -152,13 +152,13 @@ export default function App() {
               </h1>
               <div className="mt-4  flex justify-center gap-5 ">
                 <Link href="#">
-                  <FaFacebook className="w-20 h-16" />
+                  <FaFacebook className="w-10 h-10" />
                 </Link>
                 <Link href="#">
-                  <FaInstagram className="w-20 h-16" />
+                  <FaInstagram className="w-10 h-10" />
                 </Link>
                 <Link href="#">
-                  <FaTwitter className="w-20 h-16" />
+                  <FaTwitter className="w-10 h-10" />
                 </Link>
               </div>
             </div>
@@ -197,13 +197,13 @@ export default function App() {
               </h1>
               <div className="mt-4  flex justify-center gap-5 ">
                 <Link href="#">
-                  <FaFacebook className="w-20 h-16" />
+                  <FaFacebook className="w-10 h-10" />
                 </Link>
                 <Link href="#">
-                  <FaInstagram className="w-20 h-16" />
+                  <FaInstagram className="w-10 h-10" />
                 </Link>
                 <Link href="#">
-                  <FaTwitter className="w-20 h-16" />
+                  <FaTwitter className="w-10 h-10" />
                 </Link>
               </div>
             </div>

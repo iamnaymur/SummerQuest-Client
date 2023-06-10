@@ -1,12 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useAuth } from "../../hooks/useAuth";
 
 const EnrolledClasses = () => {
+  const { user } = useAuth();
   const [enrolledClass, setEnrolledClass] = useState([]);
   console.log(enrolledClass);
 
   useEffect(() => {
-    axios(`${import.meta.env.VITE_API_URL}/bookedClasses`).then((res) =>
+    axios(`${import.meta.env.VITE_API_URL}/bookedClasses/${user?.email}`).then((res) =>
       setEnrolledClass(res.data)
     );
   }, []);

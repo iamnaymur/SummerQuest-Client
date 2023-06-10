@@ -32,7 +32,9 @@ const Featured = () => {
           <div>
             <FaUnlock className="text-3xl text-blue-500" />
           </div>
-          <h2 className="text-xl bold">Unlock Your Photography Potential</h2>
+          <h2 className="text-xl bold ">
+            Unlock Your Photography Potential
+          </h2>
           <small>Enroll in Our Summer School Program</small>
           <ul>
             <li>
