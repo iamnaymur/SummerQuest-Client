@@ -14,7 +14,7 @@ const PopularClasses = () => {
       <h1 className="text-2xl bold font-displayThree text-center m-20">
         Popular Classes
       </h1>
-      <div className="grid md:grid-cols-3 grid-cols-2 gap-2 ">
+      <div className="grid md:grid-cols-3 gap-2 ">
         {popular.slice(0, 6).map((singleClass) => (
           <div>
             <div className="w-auto h-full bg-base-100 shadow-xl  hover:-translate-y-5 transition-all">

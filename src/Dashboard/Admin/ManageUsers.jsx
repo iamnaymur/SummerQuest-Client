@@ -7,7 +7,7 @@ const ManageUsers = () => {
   const [users, , refetch] = useUsers();
 
   const handleMakeAdmin = (user) => {
-    fetch(`${import.meta.env.VITE_API_URL}/users/admin/${user._id}`, {
+    fetch(`${import.meta.env.VITE_API_URL}/users/admin/${user?._id}`, {
       method: "PATCH",
     })
       .then((res) => res.json())
@@ -21,7 +21,7 @@ const ManageUsers = () => {
   };
 
   const handleMakeInstructor = (user) => {
-    fetch(`${import.meta.env.VITE_API_URL}/users/instructor/${user._id}`, {
+    fetch(`${import.meta.env.VITE_API_URL}/users/instructor/${user?._id}`, {
       method: "PATCH",
     })
       .then((res) => res.json())
