@@ -26,9 +26,9 @@ const PopularClasses = () => {
                   alt="Popular Class"
                 />
               </figure>
-              <div className="card-body">
+              <div className="p-5">
                 <h2 className="card-title">{singleClass.className}</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <p>Instructor : {singleClass.name}</p>
                 <p>Total Enrolled: {singleClass.enrolledStudents}</p>
               </div>
             </div>

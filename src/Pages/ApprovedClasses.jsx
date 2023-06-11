@@ -44,22 +44,22 @@ const ApprovedClasses = () => {
     }
   };
   return (
-    <div>
-      <h1 className="text-center font-displayTwo pt-20 bold text-3xl ">
-        All our available classes
+    <div className="p-20">
+      <h1 className="text-3xl font-displayTwo text-center ">
+        All approved classes are here
       </h1>
-      <div className="grid md:grid-cols-3 mt-10 gap-20 mx-auto container ">
+      <div className="grid md:grid-cols-3  gap-5 mx-auto container ">
         {approvedClasses.map((singleClass) => (
           <div key={singleClass._id}>
             <div
-              className={` gap-10 mb-10  shadow-xl transition-all duration-300 ease-in-out hover:shadow-teal-300  hover:shadow-2xl hover:scale-105 ${
+              className={`rounded-lg shadow-xl transition-all duration-300 ease-in-out hover:shadow-teal-300  hover:shadow-2xl hover:scale-105 ${
                 singleClass.seats === 0 ? "bg-red-500" : "bg-gray-200"
               }`}
             >
               <img
                 src={singleClass.image}
                 alt="Course Image"
-                className="transition-all object-fill w-96 h-56 mx-auto p-5  duration-300 ease-in-out transform "
+                className="transition-all object-fill w-full h-72 mx-auto p-2  duration-300 ease-in-out transform "
               />
 
               <div className="card-body">
