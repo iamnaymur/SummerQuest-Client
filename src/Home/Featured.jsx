@@ -3,8 +3,8 @@ import { FaCameraRetro, FaUnlock } from "react-icons/fa";
 
 const Featured = () => {
   return (
-    <div className="font-displayTwo container mt-10 md:flex gap-5 justify-between  mx-auto mb-5">
-      <div className="card lg:w-1/3  shadow-xl shadow-gray-100 transition-all duration-300 ease-in-out hover:shadow-teal-300  hover:shadow-2xl hover:scale-95 ">
+    <div className="font-displayTwo md:flex gap-5 mt-20 justify-between  mx-auto mb-5 lg:px-5">
+      <div className="card lg:w-1/3  shadow-2xl shadow-black transition-all duration-300 ease-in-out hover:shadow-teal-300  hover:shadow-2xl hover:scale-95 ">
         <div className="card-body">
           <div>
             <FaCameraRetro className="text-3xl text-blue-500" />
@@ -27,7 +27,7 @@ const Featured = () => {
           </div>
         </div>
       </div>
-      <div className="card lg:w-1/3  shadow-xl shadow-gray-100 transition-all duration-300 ease-in-out hover:shadow-teal-300  hover:shadow-2xl hover:scale-95">
+      <div className="card lg:w-1/3  shadow-2xl shadow-black transition-all duration-300 ease-in-out hover:shadow-teal-300  hover:shadow-2xl hover:scale-95">
         <div className="card-body">
           <div>
             <FaUnlock className="text-3xl text-blue-500" />
@@ -51,7 +51,7 @@ const Featured = () => {
           </div>
         </div>
       </div>
-      <div className="card lg:w-1/3 shadow-xl  shadow-gray-100 transition-all duration-300 ease-in-out hover:shadow-teal-300  hover:shadow-2xl hover:scale-95">
+      <div className="card lg:w-1/3 shadow-2xl shadow-black transition-all duration-300 ease-in-out hover:shadow-teal-300  hover:shadow-2xl hover:scale-95">
         <div className="card-body">
           <div>
             <FaCameraRetro className="text-3xl text-blue-500" />

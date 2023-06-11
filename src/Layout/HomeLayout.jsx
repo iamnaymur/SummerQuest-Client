@@ -17,7 +17,7 @@ const HomeLayout = () => {
       <motion.div className="progress-bar" style={{ scaleX }} />
       <Navbar></Navbar>
 
-      <div className="min-h-[calc(100vh-286px)]">
+      <div className="min-h-[calc(100vh-286px)] ">
         <Outlet></Outlet>
       </div>
       <Footer></Footer>
