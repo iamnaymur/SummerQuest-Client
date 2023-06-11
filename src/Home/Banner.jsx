@@ -36,8 +36,8 @@ export default function App() {
               className="w-full "
             />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-              <h1 className="md:text-4xl font-bold font-displayTwo">
-                <p className="animate__animated animate__fadeIn">
+              <span>
+                <p className="animate__animated text-2xl md:text-4xl font-bold font-displayTwo animate__fadeIn">
                   Welcome to Summer Quest.
                 </p>
 
@@ -47,7 +47,7 @@ export default function App() {
                     Unleash Your Photographic Creativity!
                   </small>
                 </Fade>
-              </h1>
+              </span>
               <p className="md:text-lg font-displayTwo">
                 <Fade delay={1e3}>
                   Capture moments that last a lifetime, explore breathtaking
@@ -83,8 +83,8 @@ export default function App() {
               className="w-full"
             />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-              <h1 className="md:text-4xl font-bold font-displayTwo">
-                <p className="animate__animated animate__fadeIn">
+              <span>
+                <p className="animate__animated text-2xl md:text-4xl font-bold font-displayTwo animate__fadeIn">
                   Welcome to Summer Quest.
                 </p>
 
@@ -94,7 +94,7 @@ export default function App() {
                     Unleash Your Photographic Creativity!
                   </small>
                 </Fade>
-              </h1>
+              </span>
               <p className="text-lg font-displayTwo">
                 Capture moments that last a lifetime, explore breathtaking
                 landscapes, and master the art of photography. Join us on an
@@ -128,8 +128,8 @@ export default function App() {
               className="w-full"
             />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-              <h1 className="md:text-4xl font-bold font-displayTwo">
-                <p className="animate__animated animate__fadeIn">
+              <span>
+                <p className="animate__animated text-2xl md:text-4xl font-bold font-displayTwo animate__fadeIn">
                   Welcome to Summer Quest.
                 </p>
 
@@ -139,7 +139,7 @@ export default function App() {
                     Unleash Your Photographic Creativity!
                   </small>
                 </Fade>
-              </h1>
+              </span>
               <p className="text-lg font-displayTwo">
                 Capture moments that last a lifetime, explore breathtaking
                 landscapes, and master the art of photography. Join us on an
@@ -173,8 +173,8 @@ export default function App() {
               className="w-full"
             />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-              <h1 className="md:text-4xl font-bold font-displayTwo">
-                <p className="animate__animated animate__fadeIn">
+              <span>
+                <p className="animate__animated text-2xl md:text-4xl font-bold font-displayTwo animate__fadeIn">
                   Welcome to Summer Quest.
                 </p>
 
@@ -184,7 +184,7 @@ export default function App() {
                     Unleash Your Photographic Creativity!
                   </small>
                 </Fade>
-              </h1>
+              </span>
               <p className="text-lg font-displayTwo">
                 Capture moments that last a lifetime, explore breathtaking
                 landscapes, and master the art of photography. Join us on an

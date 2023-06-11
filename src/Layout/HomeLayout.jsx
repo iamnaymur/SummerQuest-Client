@@ -13,7 +13,7 @@ const HomeLayout = () => {
   });
 
   return (
-    <>
+    <div className="mt-2">
       <motion.div className="progress-bar" style={{ scaleX }} />
       <Navbar></Navbar>
 
@@ -21,7 +21,7 @@ const HomeLayout = () => {
         <Outlet></Outlet>
       </div>
       <Footer></Footer>
-    </>
+    </div>
   );
 };
 

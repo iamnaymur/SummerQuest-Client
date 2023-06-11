@@ -4,7 +4,7 @@ import { FaFacebook, FaTwitter, FaInstagramSquare } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer
-      className="footer footer-center p-10 primary-color text-black font-displayTwo"
+      className="footer footer-center p-10 primary-color text-black mt-10 font-displayTwo"
       style={{}}
     >
       <div className="md:flex md:space-x-20">

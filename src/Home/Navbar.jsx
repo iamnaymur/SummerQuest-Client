@@ -28,27 +28,39 @@ const Navbar = () => {
         />
       </li>
       <li>
-        <Link to="/">Home</Link>
+        <Link className="font-displayTwo" to="/">
+          Home
+        </Link>
       </li>
       <li>
-        <Link to="/instructors">Instructors</Link>
+        <Link className="font-displayTwo" to="/instructors">
+          Instructors
+        </Link>
       </li>
       <li>
-        <Link to="/approvedClasses">Classes</Link>
+        <Link className="font-displayTwo" to="/approvedClasses">
+          Classes
+        </Link>
       </li>
       {role === "student" && (
         <li>
-          <Link to="/dashboard/selected-classes"> Dashboard</Link>
+          <Link className="font-displayTwo" to="/dashboard/selected-classes">
+            Dashboard
+          </Link>
         </li>
       )}
       {role === "admin" && (
         <li>
-          <Link to="/dashboard/manage-users"> Dashboard</Link>
+          <Link className="font-displayTwo" to="/dashboard/manage-users">
+            Dashboard
+          </Link>
         </li>
       )}
       {role === "instructor" && (
         <li>
-          <Link to="/dashboard/add-class"> Dashboard</Link>
+          <Link className="font-displayTwo" to="/dashboard/add-class">
+            Dashboard
+          </Link>
         </li>
       )}
     </>
@@ -69,7 +81,7 @@ const Navbar = () => {
       .classList.toggle("text-white", theme === "dark");
   }, [theme]);
   return (
-    <div className="navbar  bg-base-100 fixed z-10">
+    <div className="navbar bg-base-100 fixed z-10">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

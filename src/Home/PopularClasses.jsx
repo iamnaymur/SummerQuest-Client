@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Bounce, Fade, Slide, Zoom } from "react-awesome-reveal";
 
 const PopularClasses = () => {
   const [popular, setPopular] = useState([]);
@@ -10,10 +11,10 @@ const PopularClasses = () => {
     );
   }, []);
   return (
-    <div className="lg:px-10">
-      <h1 className="text-2xl bold font-displayThree text-center m-20">
+    <div className="lg:px-10 ">
+      <Slide className="text-2xl bold font-displayThree text-center m-20">
         Popular Classes
-      </h1>
+      </Slide>
       <div className="grid md:grid-cols-3 gap-2 ">
         {popular.slice(0, 6).map((singleClass) => (
           <div>

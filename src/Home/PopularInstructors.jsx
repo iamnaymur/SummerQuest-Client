@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaFacebook, FaYoutube, FaLinkedin } from "react-icons/fa";
+import {  Slide } from "react-awesome-reveal";
 
 const PopularInstructors = () => {
   // const { user, role} = useAuth();
@@ -13,9 +14,9 @@ const PopularInstructors = () => {
 
   return (
     <div >
-      <h1 className="text-2xl bold font-displayThree text-center m-20">
+      <Slide className="text-2xl bold font-displayThree text-center m-20">
         Our Popular instructors
-      </h1>
+      </Slide>
       <div className="grid gap-2  grid-cols-2 lg:grid-cols-3 hover:bg-opacity-80 lg:px-10">
         {instructors.slice(0, 6).map((instructor) => (
           <div key={instructor._id}>

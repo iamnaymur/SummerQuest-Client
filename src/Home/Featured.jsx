@@ -3,16 +3,18 @@ import { FaCameraRetro, FaUnlock } from "react-icons/fa";
 
 const Featured = () => {
   return (
-    <div className="font-displayTwo md:flex gap-5 mt-20 justify-between  mx-auto mb-5 lg:px-5">
-      <div className="card lg:w-1/3  shadow-2xl shadow-black transition-all duration-300 ease-in-out hover:shadow-teal-300  hover:shadow-2xl hover:scale-95 ">
+    <div className=" md:flex gap-5 mt-20 justify-between  mx-auto mb-5 lg:px-5">
+      <div className="card lg:w-1/3   shadow-2xl shadow-black transition-all duration-300 ease-in-out hover:shadow-teal-300  hover:shadow-2xl hover:scale-95 ">
         <div className="card-body">
           <div>
             <FaCameraRetro className="text-3xl text-blue-500" />
           </div>
-          <h2 className="text-xl bold">Capture the Beauty of Summer</h2>
+          <h2 className="text-xl bold font-displayThree">
+            Capture the Beauty of Summer
+          </h2>
           <small>Join Our Photography Summer School</small>
           <ul>
-            <li>
+            <li className="font-displayTwo">
               Highlight the essence of summer and how your photography summer
               school can provide participants with the perfect opportunity to
               capture the beauty of the season. Emphasize the hands-on learning
@@ -32,10 +34,12 @@ const Featured = () => {
           <div>
             <FaUnlock className="text-3xl text-blue-500" />
           </div>
-          <h2 className="text-xl bold ">Unlock Your Photography Potential</h2>
+          <h2 className="text-xl bold font-displayThree">
+            Unlock Your Photography Potential
+          </h2>
           <small>Enroll in Our Summer School Program</small>
           <ul>
-            <li>
+            <li className="font-displayTwo">
               Focus on the potential growth and development that participants
               can achieve through your photography summer school. Highlight the
               comprehensive curriculum, including technical skills, composition
@@ -56,12 +60,12 @@ const Featured = () => {
           <div>
             <FaCameraRetro className="text-3xl text-blue-500" />
           </div>
-          <h2 className="text-xl bold">
+          <h2 className="text-xl bold font-displayThree">
             Immerse Yourself in a Creative Summer Adventure
           </h2>
           <small>Discover Our Photography Summer School</small>
           <ul>
-            <li>
+            <li className="font-displayTwo">
               Highlight the unique and immersive experience your summer school
               offers to budding photographers. Emphasize the creative
               exploration, hands-on workshops, and field trips to picturesque
