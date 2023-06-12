@@ -65,7 +65,7 @@ const Registration = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex pt-20 justify-center items-center h-screen">
       <div className="card  w-full max-w-lg shadow-2xl flex justify-center  bg-base-100">
         <h1 className="text-3xl font-semibold font-displayTwo mt-5 text-center">
           Register here
