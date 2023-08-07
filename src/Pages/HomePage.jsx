@@ -5,6 +5,8 @@ import PopularInstructors from "../Home/PopularInstructors";
 import Featured from "../Home/Featured";
 import Gallery from "../Home/Gallery";
 import SocialMediaReach from "../Home/SocialMediaReach";
+import OurFeatures from "../Home/OurFeatures";
+import Testimonials from "../Home/Testimonials";
 
 const HomePage = () => {
   return (
@@ -15,6 +17,8 @@ const HomePage = () => {
       <Featured></Featured>
       <SocialMediaReach/>
       <Gallery></Gallery>
+      <OurFeatures />
+      <Testimonials/>
     </div>
   );
 };
