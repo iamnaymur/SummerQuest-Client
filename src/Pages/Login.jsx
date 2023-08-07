@@ -65,7 +65,7 @@ const Login = () => {
 
   return (
     <div className="grid lg:grid-cols-2">
-      <div className="flex justify-center items-center h-screen">
+      <div className="hidden md:flex justify-center items-center h-screen">
         <img
           className="w-2/4"
           src="https://i.ibb.co/ZhyWzc4/97-977746-beach-sunset-wallpaper-iphone-for-iphone-wallpaper-beach.jpg"

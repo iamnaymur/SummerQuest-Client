@@ -4,6 +4,7 @@ import PopularClasses from "../Home/PopularClasses";
 import PopularInstructors from "../Home/PopularInstructors";
 import Featured from "../Home/Featured";
 import Gallery from "../Home/Gallery";
+import SocialMediaReach from "../Home/SocialMediaReach";
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
       <PopularClasses></PopularClasses>
       <PopularInstructors></PopularInstructors>
       <Featured></Featured>
+      <SocialMediaReach/>
       <Gallery></Gallery>
     </div>
   );
