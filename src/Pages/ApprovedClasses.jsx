@@ -44,7 +44,7 @@ const ApprovedClasses = () => {
     }
   };
   return (
-    <div className="p-20">
+    <div className="pt-20 px-3">
       <h1 className="text-3xl font-displayTwo text-center ">
         All approved classes are here
       </h1>

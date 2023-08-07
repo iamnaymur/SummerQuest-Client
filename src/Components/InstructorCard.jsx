@@ -4,11 +4,11 @@ import { FaFacebook, FaYoutube, FaLinkedin } from "react-icons/fa";
 const InstructorCard = ({ instructor }) => {
   const { name, email, photo } = instructor;
   return (
-    <div className="max-w-md mx-auto rounded-md overflow-hidden mt-20 bg-base-100 shadow-2xl transition-all duration-300 ease-in-out hover:shadow-teal-300 hover:scale-95 mb-5">
+    <div className="mx-auto rounded-md overflow-hidden bg-base-100 shadow-2xl transition-all duration-300 ease-in-out hover:shadow-teal-300 hover:scale-95 mb-5">
       <img
         src={photo}
         alt="instructor image"
-        className="h-80 w-80 rounded shadow-gray-400 shadow-2xl object-cover"
+        className="h-80 w-96 sm:h-96 sm:w-128 rounded shadow-gray-400 shadow-2xl object-cover"
       />
 
       <div className="p-4">
